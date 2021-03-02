@@ -12,7 +12,3 @@ from .mio import loadmat, savemat, whosmat
 from . import byteordercodes
 
 __all__ = ['loadmat', 'savemat', 'whosmat', 'byteordercodes']
-
-from scipy._lib._testutils import PytestTester
-test = PytestTester(__name__)
-del PytestTester

@@ -53,8 +53,6 @@ def configuration(parent_package='',top_path=None):
                          f2py_options=f2py_options
                          )
 
-    config.add_data_dir('tests')
-
     return config
 
 

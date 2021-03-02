@@ -31,8 +31,6 @@ def configuration(parent_package='',top_path=None):
         'xsetun.f']]
     vode_src = [join('odepack', 'vode.f'), join('odepack', 'zvode.f')]
     dop_src = [join('dop','*.f')]
-    quadpack_test_src = [join('tests','_test_multivariate.c')]
-    odeint_banded_test_src = [join('tests', 'banded5x5.f')]
 
     config.add_library('mach', sources=mach_src, config_fc={'noopt': (__file__, 1)},
                        _pre_build_hook=pre_build_hook)
@@ -89,22 +87,7 @@ def configuration(parent_package='',top_path=None):
                                f2py_options=f2py_options)
     ext._pre_build_hook = pre_build_hook
 
-    config.add_extension('_test_multivariate',
-                         sources=quadpack_test_src)
-
-    # Fortran+f2py extension module for testing odeint.
-    cfg = combine_dict(lapack_opt,
-                       libraries=['lsoda', 'mach'])
-    ext = config.add_extension('_test_odeint_banded',
-                               sources=odeint_banded_test_src,
-                               depends=(lsoda_src + mach_src),
-                               f2py_options=f2py_options,
-                               **cfg)
-    ext._pre_build_hook = pre_build_hook
-
     config.add_subpackage('_ivp')
-
-    config.add_data_dir('tests')
     return config
 
 

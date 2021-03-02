@@ -49,14 +49,13 @@ Utility tools
 -------------
 ::
 
- test              --- Run scipy unittests
  show_config       --- Show scipy build configuration
  show_numpy_config --- Show numpy build configuration
  __version__       --- SciPy version string
  __numpy_version__ --- Numpy version string
 
 """
-__all__ = ['test']
+__all__ = []
 
 from numpy import show_config as show_numpy_config
 if show_numpy_config is None:
@@ -144,10 +143,6 @@ else:
     del _pep440
 
     from scipy._lib._ccallback import LowLevelCallable
-
-    from scipy._lib._testutils import PytestTester
-    test = PytestTester(__name__)
-    del PytestTester
 
     # This makes "from scipy import fft" return scipy.fft, not np.fft
     del fft

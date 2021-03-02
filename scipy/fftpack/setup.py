@@ -5,8 +5,6 @@ def configuration(parent_package='',top_path=None):
 
     config = Configuration('fftpack',parent_package, top_path)
 
-    config.add_data_dir('tests')
-
     config.add_extension('convolve', sources=['convolve.c'])
     return config
 

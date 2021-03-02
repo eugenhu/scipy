@@ -40,7 +40,6 @@ def configuration(parent_package='', top_path=None):
     ext._pre_build_hook = pre_build_hook
 
     config.add_data_files('LICENSE.md')
-    config.add_data_dir('tests')
     return config
 
 

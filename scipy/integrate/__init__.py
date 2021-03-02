@@ -97,7 +97,3 @@ from ._ivp import (solve_ivp, OdeSolution, DenseOutput,
 from ._quad_vec import quad_vec
 
 __all__ = [s for s in dir() if not s.startswith('_')]
-
-from scipy._lib._testutils import PytestTester
-test = PytestTester(__name__)
-del PytestTester

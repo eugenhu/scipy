@@ -681,7 +681,3 @@ __all__ = _ufuncs.__all__ + _basic.__all__ + orthogonal.__all__ + [
     'spherical_in',
     'spherical_kn',
 ]
-
-from scipy._lib._testutils import PytestTester
-test = PytestTester(__name__)
-del PytestTester

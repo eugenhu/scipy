@@ -5,18 +5,12 @@ def configuration(parent_package='',top_path=None):
     from numpy.distutils.misc_util import Configuration
 
     config = Configuration('_lib', parent_package, top_path)
-    config.add_data_files('tests/*.py')
 
     include_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'src'))
     depends = [os.path.join(include_dir, 'ccallback.h')]
 
     config.add_extension("_ccallback_c",
                          sources=["_ccallback_c.c"],
-                         depends=depends,
-                         include_dirs=[include_dir])
-
-    config.add_extension("_test_ccallback",
-                         sources=["src/_test_ccallback.c"],
                          depends=depends,
                          include_dirs=[include_dir])
 
@@ -39,14 +33,6 @@ def configuration(parent_package='',top_path=None):
     config.add_extension("messagestream",
                          sources=["messagestream.c"] + [get_messagestream_config],
                          depends=depends,
-                         include_dirs=[include_dir])
-
-    config.add_extension("_test_deprecation_call",
-                         sources=["_test_deprecation_call.c"],
-                         include_dirs=[include_dir])
-
-    config.add_extension("_test_deprecation_def",
-                         sources=["_test_deprecation_def.c"],
                          include_dirs=[include_dir])
 
     config.add_subpackage('_uarray')

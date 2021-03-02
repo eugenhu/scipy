@@ -4,8 +4,6 @@ def configuration(parent_package='', top_path=None):
 
     config = Configuration('transform', parent_package, top_path)
 
-    config.add_data_dir('tests')
-
     config.add_data_files('rotation.pyi')
     config.add_extension('rotation',
                          sources=['rotation.c'])

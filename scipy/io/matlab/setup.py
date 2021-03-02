@@ -5,7 +5,6 @@ def configuration(parent_package='io',top_path=None):
     config.add_extension('streams', sources=['streams.c'])
     config.add_extension('mio_utils', sources=['mio_utils.c'])
     config.add_extension('mio5_utils', sources=['mio5_utils.c'])
-    config.add_data_dir('tests')
     return config
 
 

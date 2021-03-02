@@ -14,8 +14,6 @@ def configuration(parent_package='',top_path=None):
     import numpy as np
     config = Configuration('stats', parent_package, top_path)
 
-    config.add_data_dir('tests')
-
     statlib_src = [join('statlib', '*.f')]
     config.add_library('statlib', sources=statlib_src)
 

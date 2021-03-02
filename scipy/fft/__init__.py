@@ -91,8 +91,3 @@ __all__ = [
     'dct', 'idct', 'dst', 'idst', 'dctn', 'idctn', 'dstn', 'idstn',
     'set_backend', 'skip_backend', 'set_global_backend', 'register_backend',
     'get_workers', 'set_workers']
-
-
-from scipy._lib._testutils import PytestTester
-test = PytestTester(__name__)
-del PytestTester

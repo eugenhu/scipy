@@ -9,7 +9,3 @@ from .lsmr import lsmr
 from ._gcrotmk import gcrotmk
 
 __all__ = [s for s in dir() if not s.startswith('_')]
-
-from scipy._lib._testutils import PytestTester
-test = PytestTester(__name__)
-del PytestTester

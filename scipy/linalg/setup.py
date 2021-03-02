@@ -110,8 +110,6 @@ def configuration(parent_package='', top_path=None):
                          sources=[('_matfuncs_sqrtm_triu.c')],
                          include_dirs=[get_numpy_include_dirs()])
 
-    config.add_data_dir('tests')
-
     # Cython BLAS/LAPACK
     config.add_data_files('cython_blas.pxd')
     config.add_data_files('cython_lapack.pxd')

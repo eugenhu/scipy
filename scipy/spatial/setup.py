@@ -12,8 +12,6 @@ def configuration(parent_package='', top_path=None):
 
     config = Configuration('spatial', parent_package, top_path)
 
-    config.add_data_dir('tests')
-
     # spatial.transform
     config.add_subpackage('transform')
 

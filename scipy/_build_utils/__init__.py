@@ -17,8 +17,3 @@ numpy_nodepr_api = dict(define_macros=[("NPY_NO_DEPRECATED_API",
 
 def uses_blas64():
     return (os.environ.get("NPY_USE_BLAS_ILP64", "0") != "0")
-
-
-from scipy._lib._testutils import PytestTester
-test = PytestTester(__name__)
-del PytestTester

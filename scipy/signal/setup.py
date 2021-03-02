@@ -8,8 +8,6 @@ def configuration(parent_package='', top_path=None):
 
     config = Configuration('signal', parent_package, top_path)
 
-    config.add_data_dir('tests')
-
     config.add_subpackage('windows')
 
     sigtools = config.add_extension('sigtools',

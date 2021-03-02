@@ -9,7 +9,6 @@ def configuration(parent_package='',top_path=None):
     from scipy._build_utils import numpy_nodepr_api
 
     config = Configuration('dsolve',parent_package,top_path)
-    config.add_data_dir('tests')
 
     lapack_opt = get_info('lapack_opt',notfound_action=2)
     if sys.platform == 'win32':

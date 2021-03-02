@@ -199,7 +199,3 @@ from ._tools import (
     csgraph_to_dense, csgraph_masked_from_dense, csgraph_from_masked,
     csgraph_to_masked
 )
-
-from scipy._lib._testutils import PytestTester
-test = PytestTester(__name__)
-del PytestTester

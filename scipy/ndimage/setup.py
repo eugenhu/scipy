@@ -31,16 +31,6 @@ def configuration(parent_package='', top_path=None):
                          sources=["src/_ni_label.c",],
                          include_dirs=['src']+[get_include()])
 
-    config.add_extension("_ctest",
-                         sources=["src/_ctest.c"],
-                         include_dirs=[get_include()],
-                         **numpy_nodepr_api)
-
-    config.add_extension("_cytest",
-                         sources=["src/_cytest.c"])
-
-    config.add_data_dir('tests')
-
     return config
 
 
